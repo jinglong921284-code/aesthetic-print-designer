@@ -1,5 +1,10 @@
 # Changelog
 
+## v1.0.1 - 2026-09-02
+
+- Included the MIT `LICENSE` and `NOTICE.md` inside the standalone skill folder so release ZIPs retain their legal notices when downloaded independently.
+- Kept all creative, validation, colour-specification, closure, and handoff behavior unchanged from v1.0.0.
+
 ## v1.0.0 - 2026-09-02
 
 - Removed personal aesthetic defaults, real-project examples, private paths, and the fixed 19mm silk assumption.

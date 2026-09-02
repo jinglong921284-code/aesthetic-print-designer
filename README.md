@@ -44,4 +44,4 @@ Released under the MIT License. Pantone and related marks remain the property of
 
 ## Release status
 
-This repository contains `v1.0.0`, the first public release of Aesthetic Print Designer. The installable ZIP published with the GitHub Release contains `aesthetic-print-designer/` as its only top-level folder.
+The current public release is `v1.0.1`. Its installable ZIP contains `aesthetic-print-designer/` as its only top-level folder, including the standalone license and notices.
