@@ -1,0 +1,4 @@
+interface:
+  display_name: "Aesthetic Print Designer"
+  short_description: "设计、配色、标注并验证原创时装印花与规格单"
+  default_prompt: "Use $aesthetic-print-designer to develop my print, validate its repeat, and prepare a Pantone-annotated specification."

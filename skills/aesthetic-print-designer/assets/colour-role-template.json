@@ -1,0 +1,28 @@
+{
+  "roles": [
+    {
+      "id": 1,
+      "role": "主底色",
+      "element": "",
+      "sample_points": [],
+      "sample_radius_px": 3,
+      "source_hex": null
+    },
+    {
+      "id": 2,
+      "role": "主图色",
+      "element": "",
+      "sample_points": [],
+      "sample_radius_px": 3,
+      "source_hex": null
+    },
+    {
+      "id": 3,
+      "role": "强调色",
+      "element": "",
+      "sample_points": [],
+      "sample_radius_px": 3,
+      "source_hex": null
+    }
+  ]
+}
