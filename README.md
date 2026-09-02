@@ -16,7 +16,7 @@ The skill does not treat a generated image as production artwork, a digital colo
 
 ## Installable folder
 
-The reusable skill is under `skills/aesthetic-print-designer/`. A release ZIP should contain `aesthetic-print-designer/` as its only top-level folder. Install or upload that folder/ZIP through the skill workflow supported by your agent client.
+The reusable skill is under `skills/aesthetic-print-designer/`. A release ZIP should contain `aesthetic-print-designer/` as its only top-level folder, including its standalone `LICENSE` and `NOTICE.md`. Install or upload that folder/ZIP through the skill workflow supported by your agent client.
 
 ## Local runtime
 
