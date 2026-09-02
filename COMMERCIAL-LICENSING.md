@@ -20,4 +20,3 @@ No commercial, exclusive, or assigned rights are granted until a separate writte
 ## Earlier releases
 
 `v1.0.0` and `v1.0.1` were published under the MIT License. Rights already granted for those tagged releases remain governed by their original MIT terms; this document does not revoke or alter them.
-

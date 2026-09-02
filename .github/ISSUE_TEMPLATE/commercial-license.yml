@@ -40,4 +40,3 @@ body:
       options:
         - label: I understand that no commercial or exclusive rights are granted until a separate written agreement is signed.
           required: true
-
