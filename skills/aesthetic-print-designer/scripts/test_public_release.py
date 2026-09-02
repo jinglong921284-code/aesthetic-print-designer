@@ -49,6 +49,18 @@ def main() -> int:
 
     requirements = (ROOT / "requirements.txt").read_text(encoding="utf-8").splitlines()
     assert requirements == ["numpy>=1.24,<3", "Pillow>=10.1,<13"]
+
+    license_text = (ROOT / "LICENSE").read_text(encoding="utf-8")
+    assert license_text.startswith("# Polyform Noncommercial License 1.0.0\n")
+    assert "https://polyformproject.org/licenses/noncommercial/1.0.0" in license_text
+    assert "Required Notice: Copyright (c) 2026 Lialynn." in license_text
+    assert "Required Notice: Commercial licensing, exclusive licensing, or rights-buyout inquiries:" in license_text
+    assert "MIT License" not in license_text
+
+    commercial_terms = (ROOT / "COMMERCIAL-LICENSING.md").read_text(encoding="utf-8")
+    assert "v1.0.0" in commercial_terms and "v1.0.1" in commercial_terms
+    assert "remain governed by their original MIT terms" in commercial_terms
+    assert "issues/new?template=commercial-license.yml" in commercial_terms
     print("public release static tests passed")
     return 0
 

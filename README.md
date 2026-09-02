@@ -16,7 +16,7 @@ The skill does not treat a generated image as production artwork, a digital colo
 
 ## Installable folder
 
-The reusable skill is under `skills/aesthetic-print-designer/`. A release ZIP should contain `aesthetic-print-designer/` as its only top-level folder, including its standalone `LICENSE` and `NOTICE.md`. Install or upload that folder/ZIP through the skill workflow supported by your agent client.
+The reusable skill is under `skills/aesthetic-print-designer/`. A release ZIP should contain `aesthetic-print-designer/` as its only top-level folder, including its standalone `LICENSE`, `NOTICE.md`, and `COMMERCIAL-LICENSING.md`. Install or upload that folder/ZIP through the skill workflow supported by your agent client.
 
 ## Local runtime
 
@@ -40,8 +40,10 @@ Lovart, Feishu/Lark, image-generation tools, and garment-design skills are optio
 
 ## License
 
-Released under the MIT License. Pantone and related marks remain the property of their respective owner; see `NOTICE.md` for the colour-data and non-endorsement boundary.
+`v1.1.0` and later are released under the Polyform Noncommercial License 1.0.0. Noncommercial use is available under that license; commercial licensing, exclusive licensing, or a rights buyout requires a separate written agreement. See [COMMERCIAL-LICENSING.md](COMMERCIAL-LICENSING.md) or open a [commercial-license issue](https://github.com/jinglong921284-code/aesthetic-print-designer/issues/new?template=commercial-license.yml).
+
+`v1.0.0` and `v1.0.1` remain governed by the MIT License published with those tagged releases. Previously granted rights are not revoked. Pantone and related marks remain the property of their respective owner; see `NOTICE.md` for the colour-data and non-endorsement boundary.
 
 ## Release status
 
-The current public release is `v1.0.1`. Its installable ZIP contains `aesthetic-print-designer/` as its only top-level folder, including the standalone license and notices.
+The current public release is `v1.1.0`. Its installable ZIP contains `aesthetic-print-designer/` as its only top-level folder, including the standalone license, notices, and commercial-contact terms.

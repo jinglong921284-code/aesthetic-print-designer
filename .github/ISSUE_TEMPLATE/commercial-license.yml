@@ -1,0 +1,43 @@
+name: Commercial license / rights buyout
+description: Request commercial-use terms, an exclusive license, or a full rights buyout.
+title: "[Commercial License] "
+labels:
+  - commercial-license
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form only for commercial licensing, exclusive licensing, or rights-buyout enquiries. This issue is public: do not include confidential business information, credentials, personal data, or unreleased production files.
+  - type: dropdown
+    id: request_type
+    attributes:
+      label: Request type
+      options:
+        - Commercial-use license
+        - Exclusive commercial license
+        - Copyright assignment / full rights buyout
+        - Custom commercial terms
+    validations:
+      required: true
+  - type: textarea
+    id: project_summary
+    attributes:
+      label: Public project summary
+      description: Briefly describe the intended product, service, client project, or distribution. Keep confidential details out of this field.
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Intended scope
+      description: Note the expected channels, territory, duration, and whether exclusivity is requested.
+    validations:
+      required: true
+  - type: checkboxes
+    id: acknowledgement
+    attributes:
+      label: Acknowledgement
+      options:
+        - label: I understand that no commercial or exclusive rights are granted until a separate written agreement is signed.
+          required: true
+

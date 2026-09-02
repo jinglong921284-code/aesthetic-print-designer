@@ -1,5 +1,13 @@
 # Changelog
 
+## v1.1.0 - 2026-09-02
+
+- Changed new releases from MIT to the Polyform Noncommercial License 1.0.0.
+- Added a public GitHub Issues route for commercial-use licenses, exclusive licensing, and rights-buyout enquiries.
+- Preserved the original MIT terms for the already-published v1.0.0 and v1.0.1 tags.
+- Added packaging checks so standalone release ZIPs include the license, notices, and commercial-licensing terms.
+- Made no functional changes to design, repeat validation, colour specification, closure, or handoff behavior.
+
 ## v1.0.1 - 2026-09-02
 
 - Included the MIT `LICENSE` and `NOTICE.md` inside the standalone skill folder so release ZIPs retain their legal notices when downloaded independently.
