@@ -11,6 +11,8 @@
 | Field / 字段 | Value / 内容 |
 |---|---|
 | Document status / 规格单状态 | `Draft / Design Alignment / Ready for Sampling / Revise` |
+| Sheet scope / 规格深度 | Colour Specification / Full Technical Specification |
+| Output format and language / 输出格式与语言 | Markdown / DOCX / PDF; language to confirm |
 | Print ID / 印花编号 | 待确认 |
 | Print name / 印花名称 | 待确认 |
 | Print type / architecture / 印花类型 | Repeat / placement / border / engineered / panel / 待确认 |
@@ -20,6 +22,7 @@
 | Artwork version / 图稿版本 | 待确认 |
 | Specification version / 规格单版本 | 待确认 |
 | Owner and date / 负责人及日期 | 待确认 |
+| Artwork-use notice / 图稿使用限制 | Preserve the user-supplied notice; do not infer reuse permission |
 
 ## 2. Design application and scale / 设计应用与尺度
 
@@ -37,7 +40,8 @@
 
 | Field / 字段 | Value / 内容 |
 |---|---|
-| Colour count / 色数 | 待确认 |
+| Colour count / 色数 | Representative visual colours / 设计代表色：待确认 |
+| Production separation count / 生产分色数 | 待确认；do not infer from representative colour count |
 | Selected colour system / 选用色彩系统 | Pantone TCX / other named system / 待确认 |
 | Candidate library and method / 候选色库与方法 | 待确认 |
 | Physical review status / 实体复核状态 | 待确认 |
@@ -46,7 +50,7 @@
 |---|---|---|---|---|---|
 | 1 | 待确认 | 待确认 | 待确认 | 待确认 | 待确认 |
 
-> Add or remove rows so there is exactly one sequential row for every intended production colour. The annotation artwork must preserve the source artwork and map each numbered callout to exactly one colour-table row in the same order.
+> Add or remove rows so there is exactly one sequential row for every documented colour role. The annotation artwork must preserve the source artwork and map each numbered callout to exactly one colour-table row in the same order. Visual representative colours do not automatically define production separations. For an existing specification, retain its values and matching provenance without implying new computation.
 
 ## 4. Material, process, and file technicals / 面料、工艺与文件技术信息
 

@@ -10,6 +10,13 @@ Use this independent design-stage output for designer, merchandising, and patter
 
 This mode does **not** start supplier contact, file transfer, physical sampling, production approval, a cloud-document write, or tracked closure. A request to generate a specification sheet is sufficient to create the design document, but it never promotes a candidate artwork or pending value into approval.
 
+Choose the content scope independently of the format:
+
+- **Colour Specification / 配色专项版:** numbered artwork, representative source colours, named-colour candidates, matching provenance, and colour notes. Keep a compact block for pending technical fields.
+- **Full Technical Specification / 完整技术版:** the colour content plus application, dimensions and scale, repeat/placement, material/process, file technicals, source/version control, and design-stage confirmations. Missing values remain pending; the word “full” does not mean approved.
+
+Markdown, editable DOCX, and visual PDF are presentation formats, not additional business stages. For a one- or two-page visual brief or an English PDF export, read `references/visual-print-spec-sheet.md`. Production Handoff remains a separate output mode.
+
 Use these document statuses consistently:
 
 | Status | Meaning |
@@ -34,11 +41,12 @@ Use `references/production-handoff.md` only when supplier, sample, file-transfer
 
 ## 2. Colour extraction
 
-For an explicitly selected print, copy `assets/colour-role-template.json`, lock the intended colour roles, and run `python3 scripts/run_print_tool.py colour-spec`. Treat its share values as composition estimates, not ink volume. Do not replace the role list with unconstrained clustering.
+For new extraction from an explicitly selected print, copy `assets/colour-role-template.json`, lock the intended colour roles, and run `python3 scripts/run_print_tool.py colour-spec`. Treat its share values as composition estimates, not ink volume. Do not replace the role list with unconstrained clustering. When translating or reformatting an existing sheet, reuse its exact callout-to-row mapping instead; record the source version, keep historical validation attributed to that source, and identify carried-over deltas as source values rather than a new computation.
 
 - Inspect the full-resolution source, not a screenshot of the document.
 - Separate production colours from visual transition pixels. Dry brush, antialiasing, opacity, texture, overprint, and ground show-through usually do not justify extra inks.
 - Record one representative source HEX per intended production colour. Sample from stable interior pixels, not blurred boundaries.
+- Record representative visual colour count and production separation count separately. A colour-focused sheet may describe tonal roles without defining the eventual ink or separation count.
 - Confirm the colour system from the substrate, print process, existing specification, and user request. Use Pantone FHI Cotton TCX only when it is the selected textile reference; do not impose it on every substrate or process.
 - When a verified library and CIEDE2000 calculation are available, record the library, method, Pantone code, colour name, and `ΔE00`.
 - When no verified calculation is available, write `screen approximation candidate`; do not invent a delta or describe the candidate as confirmed.
@@ -72,7 +80,7 @@ The visual preset above is configurable. A user-approved or live-document annota
 
 For a new standalone sheet, copy `assets/print-spec-sheet-template.md` before filling this section. Keep its fixed document-control, application, colour, material/process, technical, status, and open-item fields; write `待确认` rather than silently omitting an unavailable value.
 
-Use this order for each print, following the live document's existing style:
+The following is the existing-document/Feishu presentation preset; preserve a live document's approved style when editing it. A standalone visual sheet may rearrange these fields or add source-HEX swatches under `references/visual-print-spec-sheet.md`, while retaining every colour mapping and its evidence:
 
 1. Divider and level-one heading: `印花 N｜名称`.
 2. Annotated image with caption: `印花 N — 色彩区域标注`.
@@ -83,7 +91,7 @@ Use this order for each print, following the live document's existing style:
 5. Table columns in this order: `标注`、`元素`、`源图 HEX`、the named colour-system code、`色名 / ΔE00` or `色名 / 说明`. In the bundled Feishu TCX adapter, the code-column header is `Pantone TCX`.
 6. One production-note callout explaining separations, weak matches, overlaps, tonal continua, material risks, and physical-review requirements.
 
-Dimensions belong only in the highlighted `尺寸` field unless the user explicitly requests a separate technical drawing. Use the user's exact value and unit. Do not infer a repeat size from the bitmap dimensions or aspect ratio.
+Dimensions belong in the specification's size field, not on the artwork, unless the user requests a separate technical drawing. In the existing-document preset this is the highlighted `尺寸` field. Use the user's exact value and unit. Do not infer a repeat size from the bitmap dimensions or aspect ratio.
 
 ## 5. Document-level header and technical requirements
 
@@ -124,7 +132,7 @@ Finish with the confirmation sequence: physical TCX comparison → actual-fabric
 - Every annotation image has the correct native/displayed aspect ratio and caption.
 - Callout count and numbering match the table rows exactly.
 - Source HEX, Pantone code, colour name, and confidence wording are aligned by row.
-- The final consistency audit parses the actual mapping table and matches each numbered row against the locked colour-role report; values merely appearing elsewhere in the section do not count as alignment.
+- For new extraction, the consistency audit compares every exported row against the locked colour-role report. For reformatting or translation, compare against the original colour table and record its source version instead. Values merely appearing elsewhere in the section do not count as alignment.
 - `ΔE00` appears only where computed.
 - Production cautions and physical-review gates are present.
 - For external edits, the final document revision and affected sections were read back successfully.

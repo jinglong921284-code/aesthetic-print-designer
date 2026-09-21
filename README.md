@@ -12,6 +12,7 @@
 - edge lock, half-offset, 3 × 3 preview, bounded seam repair, and truthful repeat status;
 - role-locked colour extraction, CIEDE2000 candidate matching, numbered callouts, and one-to-one table mapping;
 - standardized Print Specification Sheets for design, merchandising, and pattern-room alignment, with Print ID, source lock, repeat or placement, colour, material/process, file-technical, status, and open-item fields;
+- an English two-page visual PDF preset: numbered artwork and source-colour swatches on page 1; an intact colour table, technical fields, notes, and status on page 2;
 - default local closure plus an optional Feishu/Lark adapter with full five-column row/cell readback auditing;
 - a separate versioned supplier-handoff path with sampling, transfer, receipt, and production-approval gates.
 
@@ -25,6 +26,16 @@
 Specification status uses `Draft / Design Alignment / Ready for Sampling / Revise`. `Ready for Sampling` records completed design, merchandising, and pattern-room confirmation of the current version, with no unresolved issue blocking sampling. Physical colour/fabric approval and production approval remain separate.
 
 The skill does not treat a generated image as production artwork, a digital colour candidate as physical approval, a selected design as permission to write or send, or a rights-risk screen as legal clearance.
+
+## Visual print specification sheets
+
+Within Print Specification Sheet mode, choose **Colour Specification** for palette alignment or **Full Technical Specification** for broader design-to-production alignment. Choose the format separately: Markdown, editable DOCX using available document tools, or the bundled English PDF renderer. Visual presentation is not a third approval stage.
+
+The PDF preset accepts an existing numbered image and a structured colour table. It preserves the image's aspect ratio, keeps source HEX swatches separate from physical colour standards, and retains candidate provenance and pending fields. It does not generate new artwork, calculate Pantone matches, validate repeats, or approve production. Translating an existing sheet does not require recomputing its colour data.
+
+Copy and fill `skills/aesthetic-print-designer/assets/print-spec-sheet-visual-template.json`, then follow [the visual specification workflow](skills/aesthetic-print-designer/references/visual-print-spec-sheet.md). The optional PDF dependencies are in `requirements-visual.txt`.
+
+The preview preset includes a configurable notice: **“Artwork shown is for reference only. No other use is permitted.”** Preserve any user-required notice; document creation never grants artwork reuse or publication permission. No client artwork, client specification, real colour-library data, or generated client preview is distributed with the template.
 
 ## Installable folder
 
@@ -58,4 +69,4 @@ Lovart, Feishu/Lark, image-generation tools, and garment-design skills are optio
 
 ## Release status
 
-The current public release is `v1.1.0`. Its installable ZIP contains `aesthetic-print-designer/` as its only top-level folder, including the standalone license, notices, and commercial-contact terms.
+The current public release is `v1.2.0`. Its installable ZIP contains `aesthetic-print-designer/` as its only top-level folder, including the standalone license, notices, and commercial-contact terms.

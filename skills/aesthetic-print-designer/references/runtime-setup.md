@@ -11,6 +11,12 @@ Create any isolated environment you control, install the requirements, and eithe
 
 Do not depend on a host-specific Codex, Hermes, operating-system, or user-directory path. If no candidate can import both NumPy and Pillow, the entry point stops with setup guidance instead of silently choosing another project environment.
 
+## Optional visual specification PDF
+
+For the optional English visual specification PDF renderer, install `requirements-visual.txt` in the same selected environment. Run `python3 scripts/run_print_tool.py visual-spec --input filled-spec.json --output print-spec.pdf`. This renderer adds a ReportLab dependency; it does not require a cloud service, a Pantone library, or a document application. Its input is an already prepared numbered image and colour record. Missing PDF dependencies must be resolved explicitly, not by silently using a host-private runtime.
+
+Maintainers running `scripts/test_render_print_spec.py` also need `pypdf` for PDF text/image assertions. It is a test dependency, not a requirement for normal export.
+
 ## Colour-library boundary
 
 This skill does not include, sublicense, or download a Pantone database. Supply `--database` or `PANTONE_TCX_DB` for quick JSON matching, and `--pantone-csv` for the formal role-locked specification. The user is responsible for providing a local data source they are authorized to use.

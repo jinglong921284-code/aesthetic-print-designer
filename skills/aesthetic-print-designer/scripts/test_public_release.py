@@ -47,6 +47,16 @@ def main() -> int:
         assert role["sample_points"] == []
         assert role["source_hex"] is None
 
+    visual = json.loads((ROOT / "assets/print-spec-sheet-visual-template.json").read_text(encoding="utf-8"))
+    assert visual["status"] == "Draft"
+    assert visual["edition"] == "colour"
+    assert not Path(visual["artwork"]["path"]).is_absolute()
+    assert not (ROOT / "assets" / visual["artwork"]["path"]).exists()
+    for row in visual["colours"]:
+        assert row["source_hex"] in (None, "REPLACE_WITH_SOURCE_HEX")
+        assert row["candidate"] == {"status": "pending"}
+    assert "sampling_confirmations" not in visual
+
     spec_template = (ROOT / "assets/print-spec-sheet-template.md").read_text(encoding="utf-8")
     for marker in (
         "# Print Specification Sheet / 印花规格单",

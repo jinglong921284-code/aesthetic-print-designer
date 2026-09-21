@@ -1,0 +1,44 @@
+{
+  "print_id": "To be confirmed",
+  "print_name": "Print name to be confirmed",
+  "colourway": "To be confirmed",
+  "series": "To be confirmed",
+  "composition": "To be confirmed",
+  "style": "To be confirmed",
+  "edition": "colour",
+  "version": "Draft v0.1",
+  "date": "To be confirmed",
+  "status": "Draft",
+  "artwork": {
+    "path": "REPLACE_WITH_EXISTING_NUMBERED_ARTWORK.png",
+    "callout_ids": [1, 2, 3],
+    "mapping_review": "Pending visual review of every image callout against its table row."
+  },
+  "colours": [
+    {"id": 1, "element": "Replace with actual element", "source_hex": null, "candidate": {"status": "pending"}},
+    {"id": 2, "element": "Replace with actual element", "source_hex": null, "candidate": {"status": "pending"}},
+    {"id": 3, "element": "Replace with actual element", "source_hex": null, "candidate": {"status": "pending"}}
+  ],
+  "technical": {
+    "print_type": "To be confirmed",
+    "physical_size": "To be confirmed",
+    "scale": "To be confirmed",
+    "repeat_placement": "To be confirmed",
+    "fabric": "To be confirmed",
+    "process": "To be confirmed",
+    "resolution": "To be confirmed",
+    "colour_mode": "To be confirmed",
+    "icc_profile": "To be confirmed",
+    "production_colour_count": "To be confirmed; representative colours are not verified ink separations.",
+    "source_artwork": "To be confirmed",
+    "pixel_dimensions": "To be confirmed",
+    "artwork_version": "To be confirmed"
+  },
+  "provenance": {
+    "source_document": "To be confirmed",
+    "colour_library": "Pending - no named-colour library used",
+    "matching_method": "Pending - no candidate computation performed"
+  },
+  "technical_notes": ["Physical colour and actual-fabric review remain pending."],
+  "usage_notice": "Artwork shown is for reference only. No other use is permitted."
+}

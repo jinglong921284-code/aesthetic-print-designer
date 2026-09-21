@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## v1.2.0 - 2026-09-21
 
 - Added **Print Specification Sheet / 印花规格单** as an explicit output mode with direct trigger phrases and a standalone one-pass selected-print workflow.
 - Added a reusable, standardized print-specification template covering source control, Print ID, type, size, repeat or placement, colour count and candidates, fabric, process, resolution, colour mode, version, status, technical notes, and open items.
@@ -8,6 +8,10 @@
 - Updated the public README and skill UI prompt to make the print-specification capability discoverable.
 - Refined the README positioning to an end-to-end fashion textile print workflow with production-oriented print specification sheets.
 - Added `Ready for Sampling` as the design-stage completion status after current-version design, merchandising, and pattern-room confirmation, while retaining separate physical-review and production-approval statuses.
+- Added colour-focused and full-technical scopes within Print Specification Sheet mode, independently of Markdown, DOCX, and PDF presentation formats.
+- Added a portable English two-page visual PDF preset, structured input template, optional renderer dependencies, and validation tests.
+- Preserved existing-specification values when translating or reformatting, kept representative colours separate from production separations, and made artwork-use notices explicit and configurable.
+- Published only reusable templates, instructions, and code; no client artwork, specification, or sample output is included.
 
 ## v1.1.0 - 2026-09-02
 
