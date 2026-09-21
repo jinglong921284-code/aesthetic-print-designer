@@ -6,6 +6,8 @@
 - Added a reusable, standardized print-specification template covering source control, Print ID, type, size, repeat or placement, colour count and candidates, fabric, process, resolution, colour mode, version, status, technical notes, and open items.
 - Separated design-stage specification work from the second-stage Production Handoff route so a request for a sheet does not start supplier, sampling, transfer, or approval work.
 - Updated the public README and skill UI prompt to make the print-specification capability discoverable.
+- Refined the README positioning to an end-to-end fashion textile print workflow with production-oriented print specification sheets.
+- Added `Ready for Sampling` as the design-stage completion status after current-version design, merchandising, and pattern-room confirmation, while retaining separate physical-review and production-approval statuses.
 
 ## v1.1.0 - 2026-09-02
 

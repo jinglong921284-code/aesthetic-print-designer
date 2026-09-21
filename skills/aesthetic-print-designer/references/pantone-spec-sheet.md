@@ -10,6 +10,17 @@ Use this independent design-stage output for designer, merchandising, and patter
 
 This mode does **not** start supplier contact, file transfer, physical sampling, production approval, a cloud-document write, or tracked closure. A request to generate a specification sheet is sufficient to create the design document, but it never promotes a candidate artwork or pending value into approval.
 
+Use these document statuses consistently:
+
+| Status | Meaning |
+|---|---|
+| `Draft` | The sheet is being assembled; design inputs or source values may be incomplete. |
+| `Design Alignment` | The sheet is under design, merchandising, and pattern-room review. |
+| `Ready for Sampling` | All three functions have confirmed the current artwork/specification version and no unresolved issue blocks sampling. The design-stage sheet is complete for its intended sampling use. |
+| `Revise` | Changes are required before readiness can be confirmed again. |
+
+Record confirmations in the template's existing design/merchandising/pattern-room fields. Physical colour and actual-fabric review may remain pending at `Ready for Sampling`; list those sampling checks and their owners as open items. The status records readiness and does not initiate sampling or transfer, or imply physical sample or production approval. Reassess it after a change to the confirmed artwork or specification version; record required changes as `Revise` and use `Design Alignment` when the updated version is ready for review.
+
 ### Production Handoff / 生产交接
 
 Use `references/production-handoff.md` only when supplier, sample, file-transfer, or bulk-production work is explicitly requested and authorized. It consumes the design-stage specification and adds the separate transfer, receipt, sample, and approval gates. Do not put those gates into a standalone Print Specification Sheet.

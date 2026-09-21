@@ -1,8 +1,8 @@
 # Aesthetic Print Designer
 
-`aesthetic-print-designer` is a portable agent skill covering the full fashion-textile print workflow:
+`aesthetic-print-designer` is a portable, **end-to-end fashion textile print workflow skill**.
 
-> From visual references to original print design, seamless-repeat validation, colour specification, **production-ready print spec sheets**, and supplier handoff preparation.
+> From visual references to original print design, seamless-repeat validation, colour specification, **production-oriented print specification sheets**, and supplier handoff preparation.
 
 ## What it covers
 
@@ -21,6 +21,8 @@
 |---|---|---|
 | **Print Specification Sheet / 印花规格单** | Designer, merchandising, and pattern room; align artwork, colour, scale, repeat or placement, material/process assumptions, and technical fields. | Supplier contact, file transfer, physical sample approval, or production approval. |
 | **Production Handoff / 生产交接** | Supplier, sample, and bulk-production stage; add versioned package, authorized transfer, receipt, sample, and approval evidence. | That a pending value or a locally prepared file has been sent, received, or approved. |
+
+Specification status uses `Draft / Design Alignment / Ready for Sampling / Revise`. `Ready for Sampling` records completed design, merchandising, and pattern-room confirmation of the current version, with no unresolved issue blocking sampling. Physical colour/fabric approval and production approval remain separate.
 
 The skill does not treat a generated image as production artwork, a digital colour candidate as physical approval, a selected design as permission to write or send, or a rights-risk screen as legal clearance.
 

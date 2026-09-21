@@ -10,7 +10,7 @@
 
 | Field / 字段 | Value / 内容 |
 |---|---|
-| Document status / 规格单状态 | `Draft / Design alignment / Revise` |
+| Document status / 规格单状态 | `Draft / Design Alignment / Ready for Sampling / Revise` |
 | Print ID / 印花编号 | 待确认 |
 | Print name / 印花名称 | 待确认 |
 | Print type / architecture / 印花类型 | Repeat / placement / border / engineered / panel / 待确认 |
@@ -75,9 +75,11 @@
 
 ## 6. Design-stage status / 设计阶段状态
 
+`Ready for Sampling / 可进入打样` means design, merchandising, and pattern-room confirmations are recorded for the current artwork/specification version and no unresolved issue blocks sampling. Physical colour and actual-fabric review may remain pending for the sampling stage. Record outstanding sampling checks and their owners in Section 5. This status does not mean samples or bulk production have been approved, and does not itself start sampling or file transfer.
+
 | Gate / 阶段 | Status / 状态 | Evidence or note / 证据或说明 |
 |---|---|---|
-| Design direction / 设计方向 | Draft / Design alignment / Revise |  |
+| Specification readiness / 规格单准备状态 | Draft / Design Alignment / Ready for Sampling / Revise |  |
 | Digital repeat integrity or placement evidence / 数字回位或定位证据 | Pass / Revise / Pending / Not applicable |  |
 | Physical colour and fabric review / 实体色彩与面料复核 | Pending / Pass / Revise / Not applicable |  |
 | Production Handoff / 生产交接 | Out of scope — use the separate handoff template |  |
