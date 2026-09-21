@@ -11,7 +11,7 @@
 - Added colour-focused and full-technical scopes within Print Specification Sheet mode, independently of Markdown, DOCX, and PDF presentation formats.
 - Added a portable English two-page visual PDF preset, structured input template, optional renderer dependencies, and validation tests.
 - Preserved existing-specification values when translating or reformatting, kept representative colours separate from production separations, and made artwork-use notices explicit and configurable.
-- Published only reusable templates, instructions, and code; no client artwork, specification, or sample output is included.
+- The installable skill ZIP contains only reusable templates, instructions, code, and fictional test fixtures; no client artwork, specification, or sample output is included in that ZIP. The separately published reference-only visual sample is not part of the installable package.
 
 ## v1.1.0 - 2026-09-02
 

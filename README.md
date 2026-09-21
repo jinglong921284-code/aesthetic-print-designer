@@ -4,6 +4,91 @@
 
 > From visual references to original print design, seamless-repeat validation, colour specification, **production-oriented print specification sheets**, and supplier handoff preparation.
 
+[View the sample](#sample-output) · [Workflow](#workflow-at-a-glance) · [Try it](#try-it) · [Download v1.2.0](https://github.com/jinglong921284-code/aesthetic-print-designer/releases/tag/v1.2.0) · [Commercial licensing](COMMERCIAL-LICENSING.md)
+
+## Sample output
+
+**Garden Reverie — Herons by the Stream · GDN-LY-01**
+
+An English, two-page **design-stage draft**: numbered artwork and source-colour swatches, followed by a full colour table, technical fields, notes, and status.
+
+| Page 1 — Artwork and colour callouts | Page 2 — Colour and technical details |
+|---|---|
+| [![English print specification sheet, page 1: numbered artwork and source-colour swatches. Reference only; no other use permitted.](https://github.com/jinglong921284-code/aesthetic-print-designer/releases/download/v1.2.0/GDN-LY-01_English_Artwork_Page.png)](https://github.com/jinglong921284-code/aesthetic-print-designer/releases/download/v1.2.0/GDN-LY-01_English_Artwork_Page.png) | [![English print specification sheet, page 2: colour table, candidate references, technical fields and draft status. Reference only; no other use permitted.](https://github.com/jinglong921284-code/aesthetic-print-designer/releases/download/v1.2.0/GDN-LY-01_English_Colour_Technical_Page.png)](https://github.com/jinglong921284-code/aesthetic-print-designer/releases/download/v1.2.0/GDN-LY-01_English_Colour_Technical_Page.png) |
+
+[View the full sample](https://github.com/jinglong921284-code/aesthetic-print-designer/releases/tag/v1.2.0#print-specification-sheet-preview) · [Download the two-page PDF](https://github.com/jinglong921284-code/aesthetic-print-designer/releases/download/v1.2.0/GDN-LY-01_English_Print_Spec_Sheet_Preview_v0.1.pdf)
+
+> **Artwork shown is for reference only. No other use is permitted.**
+
+The sample demonstrates the visual specification-sheet format, not an end-to-end runtime test or production approval. Its existing colour data and stated provenance were retained; unverified technical fields remain pending. Pantone entries are digital candidates, not physical colour approvals. The sample is separate from the installable skill ZIP and is not offered under the skill's software licence.
+
+## Workflow at a glance
+
+Start at the stage your task needs. Existing artwork can go straight to a specification draft; a request for a sheet does not trigger the entire workflow.
+
+| Stage | What you receive |
+|---|---|
+| **1. Reference analysis** | A reference review: motif grammar, palette relationships, composition, mark-making, and elements to avoid reproducing. |
+| **2. Original print and series development** | Direction proposals, a motif hierarchy, and original concepts or coordinated designs using an available image tool. Without one, the deliverable is a prompt and export brief. |
+| **3. Repeat or placement checks** | For repeat artwork: tile, half-offset check, 3 × 3 preview, and validation report. For placement, border, engineered, or panel work: applicable scale, orientation, boundary, and garment-zone checks. |
+| **4. Colour and print specification** | Numbered artwork, a one-to-one colour table, and a specification sheet with confirmed values, candidate references, version, status, and open items. |
+| **Optional next stage: supplier handoff preparation** | A versioned local package and outstanding sampling/approval items, when requested. Sending, uploading, or contacting a supplier requires a confirmed target and separate authorization. |
+
+Digital repeat checks, physical colour/fabric sampling, and production approval are separate decisions. A passed pixel-edge check alone is not a passed visual repeat review.
+
+## Try it
+
+### Get ready
+
+1. Download the skill ZIP from [v1.2.0](https://github.com/jinglong921284-code/aesthetic-print-designer/releases/tag/v1.2.0) and install its single `aesthetic-print-designer/` folder through your agent client's skill workflow. See [installable folder](#installable-folder).
+2. For local image/repeat tools, prepare [the Python runtime](#local-runtime). For the two-page PDF, also install the optional [visual dependencies](skills/aesthetic-print-designer/requirements-visual.txt) in that environment. Image generation needs an available image-generation/editing tool; it is not bundled with the skill. Tool/provider charges, if any, are separate.
+3. Attach your own references or artwork that you are authorized to use, then copy one of the requests below. The published sample is for viewing only, not reusable input artwork. See [licensing](#license) before commercial use.
+
+### 1. Explore original directions
+
+**Provide:** reference images and a short product, theme, or collection brief.
+
+```text
+Use aesthetic-print-designer to review the attached references and my brief.
+Extract the motif grammar, composition, mark-making and palette relationships.
+Propose three original print directions with distinct motif hierarchies.
+Explain what to retain, reinterpret and avoid copying. Do not generate images yet.
+```
+
+**You get:** a reference review and three direction proposals to choose from, not three finished artworks.
+
+### 2. Check an existing repeat tile
+
+**Provide:** the source repeat tile, not a garment mockup or screenshot.
+
+```text
+Use aesthetic-print-designer to check the attached repeat tile.
+Save the results in outputs/repeat-check/ and leave the source unchanged.
+Return the half-offset check, 3 x 3 repeat preview and validation report.
+Separate pixel-edge results from visual seam and motif checks.
+Identify anything that needs revision; do not repair the artwork yet.
+```
+
+**You get:** repeat-check images and a report. If visual inspection cannot be completed, its status stays pending; no sampling or production approval is implied.
+
+### 3. Generate an English print specification sheet
+
+**Provide:** selected artwork and any existing Print ID, version, colour table, or technical metadata. Unknown values may stay pending.
+
+```text
+Use aesthetic-print-designer to create an English two-page colour specification
+sheet as a PDF for this selected print. Save new files in outputs/print-spec-demo/.
+Preserve the artwork and keep each numbered callout matched to one colour-table row.
+If I supplied an existing specification, retain its colour values and provenance.
+For new extraction, use only a colour library I am authorized to use; without one,
+keep source HEX values and mark Pantone matching pending. Do not invent matches.
+Keep unknown technical fields pending and set the document status to Draft.
+Include: "Artwork shown is for reference only. No other use is permitted."
+Do not upload, send, contact a supplier, or start production handoff.
+```
+
+**You get:** a local two-page PDF draft with artwork, colour table, technical fields, and notes. The [visual specification workflow](skills/aesthetic-print-designer/references/visual-print-spec-sheet.md) describes the input template and renderer. This format does not replace the production artwork master.
+
 ## What it covers
 
 - reference-first aesthetic and rights-risk analysis;
@@ -45,10 +130,18 @@ The reusable skill is under `skills/aesthetic-print-designer/`. A release ZIP sh
 
 The image and repeat tools require Python 3.10+ and the packages in `requirements.txt`. Use an isolated environment and set `PRINT_DESIGNER_PYTHON` when the entry point cannot use the current interpreter.
 
+Run these commands **inside the extracted `aesthetic-print-designer/` folder**, or inside `skills/aesthetic-print-designer/` in a repository checkout:
+
 ```bash
 python3 -m venv .venv
-.venv/bin/python -m pip install -r skills/aesthetic-print-designer/requirements.txt
+.venv/bin/python -m pip install -r requirements.txt
 export PRINT_DESIGNER_PYTHON="$PWD/.venv/bin/python"
+```
+
+For the optional two-page PDF renderer, run this in the same folder and environment:
+
+```bash
+.venv/bin/python -m pip install -r requirements-visual.txt
 ```
 
 The runtime is host-neutral: it does not search private Codex, Hermes, desktop, or user-directory paths.
@@ -69,4 +162,6 @@ Lovart, Feishu/Lark, image-generation tools, and garment-design skills are optio
 
 ## Release status
 
-The current public release is `v1.2.0`. Its installable ZIP contains `aesthetic-print-designer/` as its only top-level folder, including the standalone license, notices, and commercial-contact terms.
+The current public release is [v1.2.0](https://github.com/jinglong921284-code/aesthetic-print-designer/releases/tag/v1.2.0). Its installable ZIP contains `aesthetic-print-designer/` as its only top-level folder, including the standalone license, notices, and commercial-contact terms.
+
+See the [release test report](https://github.com/jinglong921284-code/aesthetic-print-designer/releases/download/v1.2.0/TEST_REPORT-v1.2.0.md) for bundled-tool regression checks. These are program and synthetic-fixture checks, not evidence of physical sampling, customer outcomes, or production approval.
