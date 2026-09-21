@@ -1,6 +1,8 @@
 # Print Production Handoff
 
-Use this reference when a print direction advances beyond concept approval. The user-approved specification system explains the design and technical intent; a versioned local package is prepared first. The transfer channel may be email, Feishu/Lark, another approved system, or a manual handoff. Preparing the package never authorizes sending, uploading, contacting a supplier, or recording receipt.
+Use this reference only when a print direction advances from a design-stage Print Specification Sheet into supplier, sample, transfer, or bulk-production work. The user-approved specification system explains the design and technical intent; a versioned local package is prepared first. The transfer channel may be email, Feishu/Lark, another approved system, or a manual handoff. Preparing the package never authorizes sending, uploading, contacting a supplier, or recording receipt.
+
+A request to **生成规格单 / generate a Print Specification Sheet** remains in the first-stage design workflow and must not be routed here. This second-stage handoff inherits the specification, then adds transfer, receipt, sample, and production-approval evidence.
 
 ## Ordered workflow
 

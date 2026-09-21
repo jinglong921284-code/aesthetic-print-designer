@@ -1,5 +1,12 @@
 # Changelog
 
+## Unreleased
+
+- Added **Print Specification Sheet / 印花规格单** as an explicit output mode with direct trigger phrases and a standalone one-pass selected-print workflow.
+- Added a reusable, standardized print-specification template covering source control, Print ID, type, size, repeat or placement, colour count and candidates, fabric, process, resolution, colour mode, version, status, technical notes, and open items.
+- Separated design-stage specification work from the second-stage Production Handoff route so a request for a sheet does not start supplier, sampling, transfer, or approval work.
+- Updated the public README and skill UI prompt to make the print-specification capability discoverable.
+
 ## v1.1.0 - 2026-09-02
 
 - Changed new releases from MIT to the Polyform Noncommercial License 1.0.0.

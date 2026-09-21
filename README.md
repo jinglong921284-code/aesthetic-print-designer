@@ -1,6 +1,8 @@
 # Aesthetic Print Designer
 
-`aesthetic-print-designer` is a portable agent skill for developing original fashion-textile prints from reference analysis through digital validation, colour-callout specifications, selected-print closure, and production-handoff preparation.
+`aesthetic-print-designer` is a portable agent skill covering the full fashion-textile print workflow:
+
+> From visual references to original print design, seamless-repeat validation, colour specification, **production-ready print spec sheets**, and supplier handoff preparation.
 
 ## What it covers
 
@@ -9,8 +11,16 @@
 - motif hierarchy, series identity, quality review, and garment-surface mockups;
 - edge lock, half-offset, 3 × 3 preview, bounded seam repair, and truthful repeat status;
 - role-locked colour extraction, CIEDE2000 candidate matching, numbered callouts, and one-to-one table mapping;
+- standardized Print Specification Sheets for design, merchandising, and pattern-room alignment, with Print ID, source lock, repeat or placement, colour, material/process, file-technical, status, and open-item fields;
 - default local closure plus an optional Feishu/Lark adapter with full five-column row/cell readback auditing;
-- versioned local handoff preparation with separate sampling, transfer, receipt, and production-approval gates.
+- a separate versioned supplier-handoff path with sampling, transfer, receipt, and production-approval gates.
+
+## Two documentation levels
+
+| Output | Primary stage and users | What it does not imply |
+|---|---|---|
+| **Print Specification Sheet / 印花规格单** | Designer, merchandising, and pattern room; align artwork, colour, scale, repeat or placement, material/process assumptions, and technical fields. | Supplier contact, file transfer, physical sample approval, or production approval. |
+| **Production Handoff / 生产交接** | Supplier, sample, and bulk-production stage; add versioned package, authorized transfer, receipt, sample, and approval evidence. | That a pending value or a locally prepared file has been sent, received, or approved. |
 
 The skill does not treat a generated image as production artwork, a digital colour candidate as physical approval, a selected design as permission to write or send, or a rights-risk screen as legal clearance.
 

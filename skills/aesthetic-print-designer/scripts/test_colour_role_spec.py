@@ -131,6 +131,68 @@ def main() -> int:
         )
         assert duplicate_result.returncode == 3
         assert "duplicate tcx" in json.loads(duplicate_result.stdout)["error"]
+
+        six_colours = [
+            ("底色", "象牙底", (242, 236, 224), "TEST-0101"),
+            ("主图色", "蓝色主体", (63, 111, 159), "TEST-0102"),
+            ("强调色", "橙色星点", (223, 115, 39), "TEST-0103"),
+            ("叶片色", "绿色叶片", (94, 145, 109), "TEST-0104"),
+            ("花瓣色", "玫瑰花瓣", (182, 86, 117), "TEST-0105"),
+            ("描边色", "深色描边", (80, 69, 91), "TEST-0106"),
+        ]
+        six_image = np.zeros((72, 120, 3), dtype=np.uint8)
+        six_roles = []
+        six_library_rows = ["name,tcx,hex,r,g,b"]
+        for index, (role, element, rgb, tcx) in enumerate(six_colours, start=1):
+            start_x = (index - 1) * 20
+            six_image[:, start_x : start_x + 20] = rgb
+            six_roles.append(
+                {
+                    "id": index,
+                    "role": role,
+                    "element": element,
+                    "sample_points": [[start_x + 10, 36]],
+                }
+            )
+            hex_value = "#%02X%02X%02X" % rgb
+            six_library_rows.append(
+                f"'Fixture {index}',{tcx},{hex_value},{rgb[0]},{rgb[1]},{rgb[2]}"
+            )
+        six_image_path = root / "six-colour-artwork.png"
+        Image.fromarray(six_image, mode="RGB").save(six_image_path)
+        six_roles_path = root / "six-roles.json"
+        six_roles_path.write_text(
+            json.dumps({"roles": six_roles}, ensure_ascii=False),
+            encoding="utf-8",
+        )
+        six_library_path = root / "six-pantone.csv"
+        six_library_path.write_text("\n".join(six_library_rows) + "\n", encoding="utf-8")
+        six_result = subprocess.run(
+            [
+                sys.executable,
+                str(SCRIPT),
+                "--image",
+                str(six_image_path),
+                "--roles",
+                str(six_roles_path),
+                "--pantone-csv",
+                str(six_library_path),
+                "--out-dir",
+                str(root / "out-six"),
+            ],
+            text=True,
+            capture_output=True,
+        )
+        assert six_result.returncode == 0, six_result.stdout + six_result.stderr
+        six_payload = json.loads(six_result.stdout)["data"]
+        assert [role["id"] for role in six_payload["roles"]] == list(range(1, 7))
+        assert [role["pantone_tcx"] for role in six_payload["roles"]] == [
+            colour[3] for colour in six_colours
+        ]
+        assert Path(six_payload["annotation_image"]).is_file()
+        assert "| 6 | 描边色 | 深色描边 |" in Path(six_payload["markdown_spec"]).read_text(
+            encoding="utf-8"
+        )
     print("colour role spec tests passed")
     return 0
 

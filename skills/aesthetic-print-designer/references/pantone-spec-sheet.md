@@ -1,6 +1,18 @@
-# Colour-Callout Print Specification Workflow
+# Print Specification Sheet / 印花规格单 Workflow
 
 Use this workflow when extracting print colours, creating numbered colour-callout artwork, or creating and editing a print specification. The approved target specification remains the source of truth; this file defines a reusable structure, a bundled annotation preset, and optional Feishu controls.
+
+## 0. Select the document level / 选择文件层级
+
+### Print Specification Sheet / 印花规格单
+
+Use this independent design-stage output for designer, merchandising, and pattern-room alignment. Start every new sheet from `assets/print-spec-sheet-template.md`. It records the artwork source, Print ID, colour callouts, colour candidates, scale, repeat or placement settings, material/process assumptions, file technicals, risks, and open fields. It may remain a `Draft` when source values are not confirmed.
+
+This mode does **not** start supplier contact, file transfer, physical sampling, production approval, a cloud-document write, or tracked closure. A request to generate a specification sheet is sufficient to create the design document, but it never promotes a candidate artwork or pending value into approval.
+
+### Production Handoff / 生产交接
+
+Use `references/production-handoff.md` only when supplier, sample, file-transfer, or bulk-production work is explicitly requested and authorized. It consumes the design-stage specification and adds the separate transfer, receipt, sample, and approval gates. Do not put those gates into a standalone Print Specification Sheet.
 
 ## 1. Evidence and change scope
 
@@ -46,6 +58,8 @@ Placement rules:
 The visual preset above is configurable. A user-approved or live-document annotation style overrides it. The invariants are source preservation, sequential callouts, and one callout mapped to exactly one table row in the same order.
 
 ## 4. Per-print specification section
+
+For a new standalone sheet, copy `assets/print-spec-sheet-template.md` before filling this section. Keep its fixed document-control, application, colour, material/process, technical, status, and open-item fields; write `待确认` rather than silently omitting an unavailable value.
 
 Use this order for each print, following the live document's existing style:
 

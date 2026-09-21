@@ -47,6 +47,28 @@ def main() -> int:
         assert role["sample_points"] == []
         assert role["source_hex"] is None
 
+    spec_template = (ROOT / "assets/print-spec-sheet-template.md").read_text(encoding="utf-8")
+    for marker in (
+        "# Print Specification Sheet / 印花规格单",
+        "Print ID / 印花编号",
+        "Print name / 印花名称",
+        "Print type / architecture / 印花类型",
+        "Physical size / 实际尺寸",
+        "Repeat or placement setting / 回位或定位方式",
+        "Colour count / 色数",
+        "Source HEX / 源图 HEX",
+        "Pantone or named-colour candidate / Pantone 或指定色彩候选",
+        "Fabric or substrate / 面料或承印物",
+        "Print process / 印花工艺",
+        "Resolution / 分辨率",
+        "Colour mode / 色彩模式",
+        "Specification version / 规格单版本",
+        "Document status / 规格单状态",
+        "Technical notes / 技术备注",
+        "Add or remove rows so there is exactly one sequential row",
+    ):
+        assert marker in spec_template, marker
+
     requirements = (ROOT / "requirements.txt").read_text(encoding="utf-8").splitlines()
     assert requirements == ["numpy>=1.24,<3", "Pillow>=10.1,<13"]
 
