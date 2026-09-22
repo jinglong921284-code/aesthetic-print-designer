@@ -89,6 +89,8 @@ Do not upload, send, contact a supplier, or start production handoff.
 
 **You get:** a local two-page PDF draft with artwork, colour table, technical fields, and notes. The [visual specification workflow](skills/aesthetic-print-designer/references/visual-print-spec-sheet.md) describes the input template and renderer. This format does not replace the production artwork master.
 
+> **Tried it?** Leave a ⭐ if it was useful, or open an issue to share feedback, bugs, or workflow suggestions.
+
 ## What it covers
 
 - reference-first aesthetic and rights-risk analysis;
