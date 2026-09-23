@@ -6,6 +6,10 @@
 
 [View the sample](#sample-output) · [Workflow](#workflow-at-a-glance) · [Try it](#try-it) · [Download v1.2.0](https://github.com/jinglong921284-code/aesthetic-print-designer/releases/tag/v1.2.0) · [Commercial licensing](COMMERCIAL-LICENSING.md)
 
+[Plugin submission guide](docs/SUBMISSION.md) · [Submission tests](docs/SUBMISSION_TESTS.md) · [Privacy](PRIVACY.md) · [Support](SUPPORT.md)
+
+The root `plugin.json` prepares a skills-only plugin package for OpenAI submission. This is separate from the existing standalone skill ZIP and does not mean the plugin has been submitted, approved, or published in the directory.
+
 ## Sample output
 
 **Garden Reverie — Herons by the Stream · GDN-LY-01**

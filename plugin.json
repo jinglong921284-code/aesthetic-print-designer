@@ -1,0 +1,38 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "aesthetic-print-designer",
+  "version": "1.2.1",
+  "description": "Develop original textile print directions, inspect repeats, and prepare design-stage print specifications.",
+  "author": {
+    "name": "Lialynn",
+    "url": "https://github.com/jinglong921284-code"
+  },
+  "homepage": "https://github.com/jinglong921284-code/aesthetic-print-designer",
+  "repository": "https://github.com/jinglong921284-code/aesthetic-print-designer",
+  "license": "PolyForm-Noncommercial-1.0.0",
+  "keywords": ["textile", "print-design", "repeat", "colour", "specification"],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Aesthetic Print Designer",
+        "shortDescription": "Textile print design workflow",
+        "longDescription": "Develop original fashion textile print directions from references and briefs, inspect repeat tiles, organize colour callouts, and prepare design-stage Print Specification Sheets. Includes local Python tools for repeat checks, colour analysis, and an English two-page PDF preset. Image generation requires a separate available tool; proprietary colour libraries are not bundled. Digital checks and colour candidates do not establish physical sampling or production approval. External writes and supplier transfers require a confirmed target and user authorization. Distributed under the PolyForm Noncommercial License 1.0.0; commercial use requires a separate written agreement.",
+        "developerName": "Lialynn",
+        "category": "Creativity",
+        "capabilities": [
+          "Original textile print direction planning",
+          "Repeat tile checks and visual review preparation",
+          "Colour callouts and design-stage print specification sheets"
+        ],
+        "websiteURL": "https://github.com/jinglong921284-code/aesthetic-print-designer",
+        "privacyPolicyURL": "https://github.com/jinglong921284-code/aesthetic-print-designer/blob/main/PRIVACY.md",
+        "supportURL": "https://github.com/jinglong921284-code/aesthetic-print-designer/blob/main/SUPPORT.md",
+        "defaultPrompt": [
+          "Review my references and propose three original textile print directions. Do not generate images yet.",
+          "Check my repeat tile and return an offset preview, a 3 x 3 preview, and a report. Keep the source unchanged.",
+          "Create a draft Print Specification Sheet for my selected artwork. Keep unknown fields and Pantone matching pending."
+        ]
+      }
+    }
+  }
+}
