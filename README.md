@@ -4,6 +4,22 @@
 
 > From visual references to original print design, seamless-repeat validation, colour specification, **production-oriented print specification sheets**, and supplier handoff preparation.
 
+## Quick Install
+
+**[⬇ Download Skill ZIP — v1.2.0](https://github.com/jinglong921284-code/aesthetic-print-designer/releases/download/v1.2.0/aesthetic-print-designer-v1.2.0-2026-09-21.zip) · [📁 Copy or install skill](#copy-or-install-skill) · [▶ Quick Start](#try-it)**
+
+### Copy or install skill
+
+1. **Download** the ready-to-install ZIP above and unzip it. It contains one `aesthetic-print-designer/` folder with `SKILL.md` and its supporting files.
+2. **Install** that complete folder in your agent client's skills directory, or use its skill import/upload workflow if supported. If your client accepts ZIP uploads, use the ZIP directly. The destination and installation steps depend on your client.
+3. **Start** with your own references or artwork and a request from [Quick Start](#try-it).
+
+**Prefer copying from the repository?** Copy the complete [`skills/aesthetic-print-designer/`](skills/aesthetic-print-designer/) folder, not just `SKILL.md` or the whole repository. See [installable folder](#installable-folder) for details.
+
+Local image/repeat tools also need [Python setup](#local-runtime); the two-page PDF renderer needs the optional visual dependencies listed there. Image generation requires an image-generation/editing tool available in your agent client.
+
+---
+
 [View the sample](#sample-output) · [Workflow](#workflow-at-a-glance) · [Try it](#try-it) · [Download v1.2.0](https://github.com/jinglong921284-code/aesthetic-print-designer/releases/tag/v1.2.0) · [Commercial licensing](COMMERCIAL-LICENSING.md)
 
 ## Sample output
