@@ -1,5 +1,12 @@
 # Changelog
 
+## v1.3.0 - 2026-09-28
+
+- Bundled third-party TCX and separate Solid screen-reference data with provenance, checksums and upstream license notices.
+- Made the 2,800-entry TCX JSON/CSV the portable default for new quick matches and role-locked colour specifications; explicit overrides retain precedence and invalid overrides fail.
+- Repaired the auxiliary 907-colour JSON representation without changing source values; regenerated TCX CSV quoting to retain original colour-name apostrophes.
+- Preserved physical-review requirements, existing-specification provenance and all previous release assets.
+
 ## v1.2.0 - 2026-09-21
 
 - Added **Print Specification Sheet / 印花规格单** as an explicit output mode with direct trigger phrases and a standalone one-pass selected-print workflow.

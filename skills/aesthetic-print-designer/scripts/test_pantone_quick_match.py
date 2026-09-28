@@ -120,13 +120,20 @@ def main() -> int:
         assert explicit_precedence.returncode == 0
         assert json.loads(explicit_precedence.stdout)["data"]["database"]["name"] == database.name
 
-        try:
-            resolve_database(None, environment={})
-        except QuickMatchError as exc:
-            assert "--database" in str(exc)
-            assert "PANTONE_TCX_DB" in str(exc)
-        else:
-            raise AssertionError("Missing database configuration must fail")
+        bundled_path, source = resolve_database(None, environment={})
+        assert bundled_path.is_file()
+        assert source == "bundled-third-party-tcx"
+        bundled = run("--hex", "#F3ECE0", "--top", "1")
+        assert bundled.returncode == 0, bundled.stdout + bundled.stderr
+        data = json.loads(bundled.stdout)["data"]
+        assert data["database"]["entries"] == 2800
+        assert data["database"]["source"] == source
+        assert data["queries"][0]["matches"][0]["tcx"] == "11-0103"
+        assert data["queries"][0]["matches"][0]["delta_e00"] == 0
+        assert data["physical_review"]["status"] == "pending"
+        for args, env in [(("--database", str(root / "absent.json")), {}), ((), {"PANTONE_TCX_DB": str(root / "absent.json")})]:
+            missing = run(*args, "--hex", "#F3ECE0", environment=env)
+            assert missing.returncode != 0, "Invalid override must not fall back"
 
         mismatched_labels = run(
             "--database",

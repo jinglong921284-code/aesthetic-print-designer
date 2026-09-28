@@ -54,9 +54,9 @@ def resolve_database(
     configured = env.get("PANTONE_TCX_DB")
     if configured:
         return require_database(Path(configured), "PANTONE_TCX_DB")
-    raise QuickMatchError(
-        "No Pantone TCX database configured. Supply --database or set PANTONE_TCX_DB "
-        "to a local database you are authorized to use."
+    return require_database(
+        Path(__file__).resolve().parents[1] / "assets/colour-libraries/pantone-tcx-rgb.json",
+        "bundled-third-party-tcx",
     )
 
 

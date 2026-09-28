@@ -8,13 +8,12 @@ Use this mode only for a chat-level colour direction when the user supplies exac
 - Do not treat antialiasing, dry-brush transparency, overprint, texture, or ground show-through as separate colours.
 - Do not use vision-estimated RGB as an exact sample. If the image still needs semantic colour roles or reliable sampling points, use the formal role-locked workflow.
 - Numbered annotation artwork, specification documents, tracked closure, sampling, supplier handoff, and production approval always use `references/pantone-spec-sheet.md` and `python3 scripts/run_print_tool.py colour-spec`.
-- This command reads a user-provided database and writes JSON to stdout only. It must not create or update closure state, files, or external documents.
+- This command reads the bundled or user-provided database and writes JSON to stdout only. It must not create or update closure state, files, or external documents.
 
 ## Command
 
 ```bash
 python3 scripts/run_print_tool.py pantone-quick \
-  --database <authorized-pantone-tcx-rgb.json> \
   --hex '#F3ECE0' --label '底色' \
   --hex '#3F6F9F' --label '主图色' \
   --top 3
@@ -28,16 +27,17 @@ Database resolution order:
 
 1. `--database <pantone-tcx-rgb.json>`;
 2. `PANTONE_TCX_DB`;
+3. bundled `assets/colour-libraries/pantone-tcx-rgb.json`.
 
-If neither is configured, the tool stops with a readable error. It never searches a user directory, downloads a database, or substitutes a bundled colour library.
+The bundled fallback resolves relative to the installed skill, not the working directory. Missing bundled data or an invalid explicit override produces an error. The tool never searches a user directory or downloads a database.
 
 The JSON database must be a non-empty array whose entries contain unique `tcx` values and the fields `tcx`, `name`, `hex`, `r`, `g`, and `b`. The result records the database filename, configuration source, entry count, and SHA-256 of the exact database used without exposing its full local path.
 
-This skill does not include or sublicense Pantone data. The user must provide a local database they are authorized to use. Pantone and related marks belong to their respective owner; this independent skill is not sponsored, endorsed, or certified by Pantone.
+The bundled third-party screen approximations, source versions and licenses are documented in `assets/colour-libraries/README.md`. They are not official Pantone measurements. User overrides must come from a source the user is authorized to use. Pantone and related marks belong to their respective owner; this independent skill is not sponsored, endorsed, or certified by Pantone.
 
 ## Reading the result
 
-- `status: screen_computed_candidate` means the candidates were computed against the named user-provided library with sRGB-to-Lab and CIEDE2000.
+- `status: screen_computed_candidate` means the candidates were computed against the named bundled or user-provided library with sRGB-to-Lab and CIEDE2000.
 - Candidates are ordered deterministically by `(delta_e00, tcx)`; `rank: 1` is the nearest digital candidate.
 - `physical_review.status` remains `pending` in every result.
 - A computed screen candidate is not an approved physical TCX colour, strike-off result, production separation, or bulk-production approval. Confirm against a physical Pantone FHI Cotton TCX reference and the intended fabric before any production decision.

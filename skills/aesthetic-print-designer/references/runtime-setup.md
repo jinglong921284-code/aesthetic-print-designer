@@ -19,7 +19,7 @@ Maintainers running `scripts/test_render_print_spec.py` also need `pypdf` for PD
 
 ## Colour-library boundary
 
-This skill does not include, sublicense, or download a Pantone database. Supply `--database` or `PANTONE_TCX_DB` for quick JSON matching, and `--pantone-csv` for the formal role-locked specification. The user is responsible for providing a local data source they are authorized to use.
+The skill bundles third-party screen approximation data described in `assets/colour-libraries/README.md`. Quick matching defaults to `pantone-tcx-rgb.json`; formal role-locked specification defaults to `pantone-tcx.csv`. Supply `--database` or `PANTONE_TCX_DB` for a quick-match override, and `--pantone-csv` for a specification override, using a source you are authorized to use. Invalid explicit paths fail; they never silently fall back. No runtime download is needed.
 
 Computed results are candidates derived from the supplied digital data. They are not official Pantone certification, physical colour approval, strike-off approval, or production approval. Confirm the colour system, substrate, process, physical reference, intended fabric, and standard-light review for each project.
 
