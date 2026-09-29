@@ -35,7 +35,7 @@
             "delta_e00": 0.0
           }
         ],
-        "label": "底色"
+        "label": "Ground"
       },
       {
         "source_hex": "#3F6F9F",
@@ -58,7 +58,7 @@
             "delta_e00": 2.4062
           }
         ],
-        "label": "主图色"
+        "label": "Main motif"
       },
       {
         "source_hex": "#DF7327",
@@ -81,7 +81,7 @@
             "delta_e00": 1.4313
           }
         ],
-        "label": "强调色"
+        "label": "Accent"
       }
     ],
     "physical_review": {

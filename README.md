@@ -8,7 +8,7 @@
 
 **[⬇ Download Skill ZIP — v1.3.0](https://github.com/jinglong921284-code/aesthetic-print-designer/releases/download/v1.3.0/aesthetic-print-designer-v1.3.0-2026-09-28.zip) · [📁 Copy or install skill](#copy-or-install-skill) · [▶ Quick Start](#try-it)**
 
-**New to skills? [中文安装与十分钟上手教程](docs/getting-started.zh-CN.md) · [Worked example: input → tool run → results](docs/first-run-example.zh-CN.md)**
+**New to skills? [Installation & ten-minute getting-started guide](docs/getting-started.md) · [Worked example: input → tool run → results](docs/first-run-example.md)**
 
 ### Copy or install skill
 
