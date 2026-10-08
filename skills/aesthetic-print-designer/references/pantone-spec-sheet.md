@@ -51,7 +51,7 @@ For new extraction from an explicitly selected print, copy `assets/colour-role-t
 - When a verified library and CIEDE2000 calculation are available, record the library, method, Pantone code, colour name, and `ΔE00`.
 - When no verified calculation is available, write `screen approximation candidate`; do not invent a delta or describe the candidate as confirmed.
 - Require the corresponding physical colour reference and strike-off review on the actual fabric. Call out sheen, fibre, weight, finish, optical brightener, metamerism, transparency, and dark-colour detail when relevant.
-- This package contains no Pantone database. Use only a local colour library the user is authorized to use. A computed result is specific to that digital dataset and is not official certification or physical approval.
+- The default TCX library is the bundled third-party screen approximation CSV in `assets/colour-libraries/pantone-tcx.csv`; see that folder's README for sources and licenses. Use `--pantone-csv` for an authorized user-supplied override. Do not substitute Solid C/U data for TCX. A computed result is specific to that digital dataset and is not official certification or physical approval.
 
 ## 3. Numbered annotation artwork
 

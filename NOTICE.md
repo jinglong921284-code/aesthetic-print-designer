@@ -6,7 +6,7 @@
 
 ## Third-party names and production boundaries
 
-This repository does not contain, sublicense, download, or reconstruct a Pantone colour database. Pantone and related marks are the property of their respective owner. This independent skill is not sponsored, endorsed, or certified by Pantone.
+Starting with v1.3.0, this package includes third-party digital colour approximations in `assets/colour-libraries/` within the installable skill folder. See that folder's README, source manifest and license notices. Third-party materials retain their upstream terms rather than the skill's Polyform Noncommercial terms. These are not official Pantone measurements or an official Pantone-licensed database. Pantone and related marks are the property of their respective owner. This independent skill is not sponsored, endorsed, or certified by Pantone.
 
 Lovart, Feishu/Lark, Codex, and other product names may be referenced only to describe optional interoperability. Their names and marks belong to their respective owners; inclusion does not imply sponsorship or endorsement.
 

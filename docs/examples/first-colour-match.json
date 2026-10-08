@@ -1,0 +1,102 @@
+{
+  "ok": true,
+  "data": {
+    "schema_version": 1,
+    "status": "screen_computed_candidate",
+    "scope": "chat_level_exact_hex_or_sampled_colour",
+    "matching_method": "sRGB to Lab, CIEDE2000",
+    "candidate_basis": "Computed against the named local database; digital screen candidates only",
+    "database": {
+      "name": "pantone-tcx-rgb.json",
+      "source": "bundled-third-party-tcx",
+      "sha256": "5e5ac131379a2a934e4291de2f11393e9c7ebcb490b079677ca427292423b7a5",
+      "entries": 2800
+    },
+    "requested_top": 1,
+    "queries": [
+      {
+        "source_hex": "#F3ECE0",
+        "source_rgb": [
+          243,
+          236,
+          224
+        ],
+        "matches": [
+          {
+            "rank": 1,
+            "tcx": "11-0103",
+            "name": "Egret",
+            "hex": "#F3ECE0",
+            "rgb": [
+              243,
+              236,
+              224
+            ],
+            "delta_e00": 0.0
+          }
+        ],
+        "label": "Ground"
+      },
+      {
+        "source_hex": "#3F6F9F",
+        "source_rgb": [
+          63,
+          111,
+          159
+        ],
+        "matches": [
+          {
+            "rank": 1,
+            "tcx": "18-4141",
+            "name": "Campanula",
+            "hex": "#3272AF",
+            "rgb": [
+              50,
+              114,
+              175
+            ],
+            "delta_e00": 2.4062
+          }
+        ],
+        "label": "Main motif"
+      },
+      {
+        "source_hex": "#DF7327",
+        "source_rgb": [
+          223,
+          115,
+          39
+        ],
+        "matches": [
+          {
+            "rank": 1,
+            "tcx": "16-1255",
+            "name": "Russet Orange",
+            "hex": "#E47127",
+            "rgb": [
+              228,
+              113,
+              39
+            ],
+            "delta_e00": 1.4313
+          }
+        ],
+        "label": "Accent"
+      }
+    ],
+    "physical_review": {
+      "status": "pending",
+      "requirements": [
+        "physical Pantone FHI Cotton TCX reference",
+        "intended-fabric strike-off",
+        "standard-light review"
+      ]
+    },
+    "approval_boundary": "Not a physical TCX approval, strike-off approval, production separation, or bulk-production approval",
+    "writes": {
+      "closure": false,
+      "external_document": false,
+      "files": false
+    }
+  }
+}

@@ -13,7 +13,7 @@ This is submission preparation, not evidence of directory acceptance or publicat
 
 The canonical entry point is root [`plugin.json`](../plugin.json), using the portable Agent Plugins schema. OpenAI listing fields live under `extensions.com.openai.interface`. The host discovers `skills/aesthetic-print-designer/` from the root `skills/` directory. No redundant compatibility manifest, MCP configuration, app connection, or hook is required for this package.
 
-Manifest version **1.2.1** identifies this new packaging revision; it does not assert that a v1.2.1 GitHub release or directory listing already exists. The existing public skill release remains v1.2.0 until a new release is deliberately published.
+Manifest version **1.3.1** identifies this local packaging revision aligned with the public standalone skill release **v1.3.0**. It does not assert that a v1.3.1 release or directory listing exists. The plugin bundle and standalone skill ZIP are separate artifacts.
 
 The manifest contains the display name, concise subtitle, long description, Creativity category, three capabilities, and three starter prompts. It uses **Lialynn**, the name in the existing copyright notice. The publisher must verify that this matches the identity selected in the submission portal; if it differs, update both `author.name` and `developerName` together and align the public notices before submission.
 
@@ -35,7 +35,7 @@ From a clean checkout of the commit being submitted, run:
 
 ```bash
 git archive --format=zip --prefix=aesthetic-print-designer/ \
-  -o ../aesthetic-print-designer-1.2.1-plugin.zip HEAD \
+  -o ../aesthetic-print-designer-1.3.1-plugin.zip HEAD \
   plugin.json README.md LICENSE NOTICE.md COMMERCIAL-LICENSING.md \
   PRIVACY.md SUPPORT.md docs skills
 ```
@@ -58,3 +58,7 @@ The portable JSON schema checks portable fields, but deliberately leaves extensi
 - Choose supported countries/regions, complete policy attestations and release notes, resolve scan issues, and submit for review. Publish only after approval and the publisher's release decision.
 
 Suggested release note: “Adds a portable skills-only plugin manifest, privacy and support documentation, and reproducible submission test cases around the existing textile-print workflow. Core skill behavior and licensing remain unchanged.”
+
+## Local alignment verification
+
+See [LOCAL_VALIDATION-2026-10-08.md](LOCAL_VALIDATION-2026-10-08.md) for Mac installation-file checks, first colour-tool execution, regression results and eight completed fresh Mac agent scenarios. These checks do not establish Windows execution, independent first-user success, or directory approval.

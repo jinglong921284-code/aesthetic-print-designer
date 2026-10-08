@@ -375,7 +375,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="Build a role-locked Pantone TCX print specification")
     parser.add_argument("--image", required=True)
     parser.add_argument("--roles", required=True)
-    parser.add_argument("--pantone-csv", required=True)
+    parser.add_argument("--pantone-csv", default=str(Path(__file__).resolve().parents[1] / "assets/colour-libraries/pantone-tcx.csv"), help="TCX CSV override; defaults to the bundled third-party screen reference")
     parser.add_argument("--out-dir", required=True)
     parser.add_argument("--fabric")
     parser.set_defaults(handler=command_build)

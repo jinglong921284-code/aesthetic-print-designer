@@ -4,11 +4,29 @@
 
 > From visual references to original print design, seamless-repeat validation, colour specification, **production-oriented print specification sheets**, and supplier handoff preparation.
 
-[View the sample](#sample-output) · [Workflow](#workflow-at-a-glance) · [Try it](#try-it) · [Download v1.2.0](https://github.com/jinglong921284-code/aesthetic-print-designer/releases/tag/v1.2.0) · [Commercial licensing](COMMERCIAL-LICENSING.md)
+## Quick Install
+
+**[⬇ Download Skill ZIP — v1.3.0](https://github.com/jinglong921284-code/aesthetic-print-designer/releases/download/v1.3.0/aesthetic-print-designer-v1.3.0-2026-09-28.zip) · [📁 Copy or install skill](#copy-or-install-skill) · [▶ Quick Start](#try-it)**
+
+**New to skills? [Installation & ten-minute getting-started guide](docs/getting-started.md) · [Worked example: input → tool run → results](docs/first-run-example.md)**
+
+### Copy or install skill
+
+1. **Download** the ready-to-install ZIP above and unzip it. It contains one `aesthetic-print-designer/` folder with `SKILL.md` and its supporting files.
+2. **Install** that complete folder in your agent client's skills directory, or use its skill import/upload workflow if supported. If your client accepts ZIP uploads, use the ZIP directly. The destination and installation steps depend on your client.
+3. **Start** with your own references or artwork and a request from [Quick Start](#try-it).
+
+**Prefer copying from the repository?** Copy the complete [`skills/aesthetic-print-designer/`](skills/aesthetic-print-designer/) folder, not just `SKILL.md` or the whole repository. See [installable folder](#installable-folder) for details.
+
+Local image/repeat tools also need [Python setup](#local-runtime); the two-page PDF renderer needs the optional visual dependencies listed there. Image generation requires an image-generation/editing tool available in your agent client.
+
+---
+
+[View the sample](#sample-output) · [Workflow](#workflow-at-a-glance) · [Try it](#try-it) · [Download v1.3.0](https://github.com/jinglong921284-code/aesthetic-print-designer/releases/tag/v1.3.0) · [Commercial licensing](COMMERCIAL-LICENSING.md)
 
 [Plugin submission guide](docs/SUBMISSION.md) · [Submission tests](docs/SUBMISSION_TESTS.md) · [Privacy](PRIVACY.md) · [Support](SUPPORT.md)
 
-The root `plugin.json` prepares a skills-only plugin package for OpenAI submission. This is separate from the existing standalone skill ZIP and does not mean the plugin has been submitted, approved, or published in the directory.
+The root `plugin.json` prepares a skills-only plugin package separately from the standalone v1.3.0 skill ZIP. It does not establish submission, approval or directory publication.
 
 ## Sample output
 
@@ -44,7 +62,7 @@ Digital repeat checks, physical colour/fabric sampling, and production approval 
 
 ### Get ready
 
-1. Download the skill ZIP from [v1.2.0](https://github.com/jinglong921284-code/aesthetic-print-designer/releases/tag/v1.2.0) and install its single `aesthetic-print-designer/` folder through your agent client's skill workflow. See [installable folder](#installable-folder).
+1. Download the skill ZIP from [v1.3.0](https://github.com/jinglong921284-code/aesthetic-print-designer/releases/tag/v1.3.0) and install its single `aesthetic-print-designer/` folder through your agent client's skill workflow. See [installable folder](#installable-folder).
 2. For local image/repeat tools, prepare [the Python runtime](#local-runtime). For the two-page PDF, also install the optional [visual dependencies](skills/aesthetic-print-designer/requirements-visual.txt) in that environment. Image generation needs an available image-generation/editing tool; it is not bundled with the skill. Tool/provider charges, if any, are separate.
 3. Attach your own references or artwork that you are authorized to use, then copy one of the requests below. The published sample is for viewing only, not reusable input artwork. See [licensing](#license) before commercial use.
 
@@ -84,7 +102,8 @@ Use aesthetic-print-designer to create an English two-page colour specification
 sheet as a PDF for this selected print. Save new files in outputs/print-spec-demo/.
 Preserve the artwork and keep each numbered callout matched to one colour-table row.
 If I supplied an existing specification, retain its colour values and provenance.
-For new extraction, use only a colour library I am authorized to use; without one,
+For new extraction, use the bundled third-party TCX screen references or my
+authorized library override; if neither is available,
 keep source HEX values and mark Pantone matching pending. Do not invent matches.
 Keep unknown technical fields pending and set the document status to Draft.
 Include: "Artwork shown is for reference only. No other use is permitted."
@@ -154,7 +173,7 @@ The runtime is host-neutral: it does not search private Codex, Hermes, desktop, 
 
 ## Colour-data boundary
 
-No Pantone database, ICC profile, proprietary colour library, or user aesthetic profile is distributed with this repository. Users must supply local data they are authorized to use. Computed matches remain dataset-specific digital candidates pending the appropriate physical reference, intended-fabric strike-off, and standard-light review.
+Starting with v1.3.0, the installable skill includes [third-party digital colour references](skills/aesthetic-print-designer/assets/colour-libraries/README.md): 2,800 TCX entries plus separate Solid reference sets, with source versions and upstream license notices. TCX matching works with the bundled JSON/CSV by default; user-supplied libraries can override them. These are screen approximations, not official Pantone measurements or an official Pantone-licensed database. No ICC profile or user aesthetic profile is distributed. Computed matches remain dataset-specific digital candidates pending the appropriate physical reference, intended-fabric strike-off, and standard-light review.
 
 ## Optional integrations
 
@@ -162,12 +181,12 @@ Lovart, Feishu/Lark, image-generation tools, and garment-design skills are optio
 
 ## License
 
-`v1.1.0` and later are released under the Polyform Noncommercial License 1.0.0. Noncommercial use is available under that license; commercial licensing, exclusive licensing, or a rights buyout requires a separate written agreement. See [COMMERCIAL-LICENSING.md](COMMERCIAL-LICENSING.md) or open a [commercial-license issue](https://github.com/jinglong921284-code/aesthetic-print-designer/issues/new?template=commercial-license.yml).
+`v1.1.0` and later are released under the Polyform Noncommercial License 1.0.0. Bundled third-party colour data retains its upstream license terms; see the [colour-library notices](skills/aesthetic-print-designer/assets/colour-libraries/README.md). Noncommercial use is available under that license; commercial licensing, exclusive licensing, or a rights buyout requires a separate written agreement. See [COMMERCIAL-LICENSING.md](COMMERCIAL-LICENSING.md) or open a [commercial-license issue](https://github.com/jinglong921284-code/aesthetic-print-designer/issues/new?template=commercial-license.yml).
 
 `v1.0.0` and `v1.0.1` remain governed by the MIT License published with those tagged releases. Previously granted rights are not revoked. Pantone and related marks remain the property of their respective owner; see `NOTICE.md` for the colour-data and non-endorsement boundary.
 
 ## Release status
 
-The current public release is [v1.2.0](https://github.com/jinglong921284-code/aesthetic-print-designer/releases/tag/v1.2.0). Its installable ZIP contains `aesthetic-print-designer/` as its only top-level folder, including the standalone license, notices, and commercial-contact terms.
+The current public release is [v1.3.0](https://github.com/jinglong921284-code/aesthetic-print-designer/releases/tag/v1.3.0). Its installable ZIP contains `aesthetic-print-designer/` as its only top-level folder, including the standalone license, notices, and commercial-contact terms.
 
-See the [release test report](https://github.com/jinglong921284-code/aesthetic-print-designer/releases/download/v1.2.0/TEST_REPORT-v1.2.0.md) for bundled-tool regression checks. These are program and synthetic-fixture checks, not evidence of physical sampling, customer outcomes, or production approval.
+See the [release test report](https://github.com/jinglong921284-code/aesthetic-print-designer/releases/download/v1.3.0/TEST_REPORT-v1.3.0.md) for bundled-tool regression checks. These are program and synthetic-fixture checks, not evidence of physical sampling, customer outcomes, or production approval.

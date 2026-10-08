@@ -18,10 +18,10 @@ Public issues must not contain API keys, access tokens, client artwork, personal
 
 ## Common setup checks
 
-- Install the single skill folder for the standalone skill workflow, or use the whole plugin package described in the [submission guide](docs/SUBMISSION.md). The existing v1.2.0 skill ZIP is not the new plugin bundle.
+- Install the single skill folder for the standalone skill workflow, or use the whole plugin package described in the [submission guide](docs/SUBMISSION.md). The existing v1.3.0 skill ZIP is not the new plugin bundle.
 - Local image tools require Python 3.10+ with the skill's `requirements.txt`; the PDF preset also requires `requirements-visual.txt`. Follow [Local runtime](README.md#local-runtime).
 - Image generation needs a separate available image tool. Without one, the workflow can return prompts and export requirements.
-- No Pantone database is bundled. Without authorized colour data, retain source HEX values and leave named-colour matching pending.
+- The v1.3.0 skill bundles attributed third-party TCX screen reference data and separate Solid reference sets; see the [colour-library notices](skills/aesthetic-print-designer/assets/colour-libraries/README.md). These are not official Pantone measurements or an official Pantone-licensed database. TCX matching works locally by default; authorized user libraries may override it. Invalid explicit paths fail rather than silently falling back. Keep source HEX values and dataset provenance, and leave physical colour/fabric approval pending.
 - Optional Feishu/Lark work needs the user's configured tools, credentials, permissions, and target. Core local work remains available without it.
 
 Reports and previews support design decisions. They do not certify intellectual-property clearance, physical colour, fabric performance, supplier receipt, or production approval.

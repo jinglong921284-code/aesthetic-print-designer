@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import json
+import hashlib
 from pathlib import Path
 
 
@@ -38,8 +39,15 @@ def main() -> int:
         if path.is_file()
         and path.suffix.lower() in {".csv", ".icc", ".icm"}
         and "test" not in path.name.lower()
+        and path.relative_to(ROOT).as_posix() != "assets/colour-libraries/pantone-tcx.csv"
     ]
     assert not colour_data, f"unexpected colour-library or profile data: {colour_data}"
+
+    library = ROOT / "assets/colour-libraries"
+    manifest = json.loads((library / "manifest.json").read_text())
+    for name, expected in manifest["files"].items():
+        assert hashlib.sha256((library / name).read_bytes()).hexdigest() == expected, name
+    assert (library / "licenses/pantone-tcx-LICENSE.txt").is_file()
 
     template = json.loads((ROOT / "assets/colour-role-template.json").read_text(encoding="utf-8"))
     for role in template["roles"]:

@@ -1,0 +1,127 @@
+[
+  {
+    "case": "P1",
+    "status": "Pass",
+    "host": "macOS 27.0.1 arm64 / Codex CLI 0.162.0-alpha.2",
+    "model": "gpt-6.1-sol (CLI default)",
+    "auth": "ChatGPT entitlement; API-key environment variables removed",
+    "date": "2026-10-08 Asia/Shanghai",
+    "input_hashes_unchanged": true,
+    "view_image_calls": 1,
+    "new_files": [],
+    "evidence": "P1.md",
+    "private_event_stream_sha256": "29ba18c345d7abd2c0ac69e77416a2fd246b7725e3360a022ce80b11585d59d8"
+  },
+  {
+    "case": "P2",
+    "status": "Pass",
+    "host": "macOS 27.0.1 arm64 / Codex CLI 0.162.0-alpha.2",
+    "model": "gpt-6.1-sol (CLI default)",
+    "auth": "ChatGPT entitlement; API-key environment variables removed",
+    "date": "2026-10-08 Asia/Shanghai",
+    "input_hashes_unchanged": true,
+    "view_image_calls": 2,
+    "new_files": [
+      "outputs/P2/tile-3x3-check.png",
+      "outputs/P2/tile-offset-check.png",
+      "outputs/P2/tile-validation.json"
+    ],
+    "evidence": "P2.md",
+    "private_event_stream_sha256": "e8a65cbb9bbc7b60b62c7284e63580cce88b0ce56a1ce1f51722f9a831c7e40f"
+  },
+  {
+    "case": "P3",
+    "status": "Pass",
+    "host": "macOS 27.0.1 arm64 / Codex CLI 0.162.0-alpha.2",
+    "model": "gpt-6.1-sol (CLI default)",
+    "auth": "ChatGPT entitlement; API-key environment variables removed",
+    "date": "2026-10-08 Asia/Shanghai",
+    "input_hashes_unchanged": true,
+    "view_image_calls": 2,
+    "new_files": [
+      "outputs/P3/colour-table.csv",
+      "outputs/P3/placement-colour-role-annotation.png",
+      "outputs/P3/placement-colour-role-spec.json",
+      "outputs/P3/placement-colour-role-spec.md"
+    ],
+    "evidence": "P3.md",
+    "private_event_stream_sha256": "067eb5d316e8369da23ada900a983c8b7770ac923146787e2e7c4d15ad351ba9"
+  },
+  {
+    "case": "P4",
+    "status": "Pass",
+    "host": "macOS 27.0.1 arm64 / Codex CLI 0.162.0-alpha.2",
+    "model": "gpt-6.1-sol (CLI default)",
+    "auth": "ChatGPT entitlement; API-key environment variables removed",
+    "date": "2026-10-08 Asia/Shanghai",
+    "input_hashes_unchanged": true,
+    "view_image_calls": 2,
+    "new_files": [
+      "outputs/P4/colour-specification.pdf",
+      "outputs/P4/review/page-1.png",
+      "outputs/P4/review/page-2.png"
+    ],
+    "evidence": "P4.md",
+    "private_event_stream_sha256": "b7a61cdd571290f7b0fdce113bdba05082970d6fad8f81ddbf10822bc47025a9"
+  },
+  {
+    "case": "P5",
+    "status": "Pass",
+    "host": "macOS 27.0.1 arm64 / Codex CLI 0.162.0-alpha.2",
+    "model": "gpt-6.1-sol (CLI default)",
+    "auth": "ChatGPT entitlement; API-key environment variables removed",
+    "date": "2026-10-08 Asia/Shanghai",
+    "input_hashes_unchanged": true,
+    "view_image_calls": 2,
+    "new_files": [
+      "outputs/P5/TEST-PLACEMENT-01_fixture-v1_colour-callouts.png",
+      "outputs/P5/TEST-PLACEMENT-01_fixture-v1_print-specification.md",
+      "outputs/P5/TEST-PLACEMENT-01_fixture-v1_source.png",
+      "outputs/P5/colour-role-record.json"
+    ],
+    "evidence": "P5.md",
+    "private_event_stream_sha256": "8ae1652bc92a0302013d86b8b6f2c619c9dd37c92a49569f9d4a760999b2f027"
+  },
+  {
+    "case": "N1",
+    "status": "Pass",
+    "host": "macOS 27.0.1 arm64 / Codex CLI 0.162.0-alpha.2",
+    "model": "gpt-6.1-sol (CLI default)",
+    "auth": "ChatGPT entitlement; API-key environment variables removed",
+    "date": "2026-10-08 Asia/Shanghai",
+    "input_hashes_unchanged": true,
+    "view_image_calls": 0,
+    "new_files": [
+      "colour_evidence.json",
+      "colour_review.md"
+    ],
+    "evidence": "N1.md",
+    "private_event_stream_sha256": "24c9131c6c3249ab4d5a368a24d46546a6b1ccf73c4233d720b4a8fa6ce9c97f"
+  },
+  {
+    "case": "N2",
+    "status": "Pass",
+    "host": "macOS 27.0.1 arm64 / Codex CLI 0.162.0-alpha.2",
+    "model": "gpt-6.1-sol (CLI default)",
+    "auth": "ChatGPT entitlement; API-key environment variables removed",
+    "date": "2026-10-08 Asia/Shanghai",
+    "input_hashes_unchanged": true,
+    "view_image_calls": 0,
+    "new_files": [],
+    "evidence": "N2.md",
+    "private_event_stream_sha256": "0018f05f377da42909532c2310e234a3381e58aa6d6352fb60757143e06c96eb"
+  },
+  {
+    "case": "N3",
+    "status": "Pass",
+    "host": "macOS 27.0.1 arm64 / Codex CLI 0.162.0-alpha.2",
+    "model": "gpt-6.1-sol (CLI default)",
+    "auth": "ChatGPT entitlement; API-key environment variables removed",
+    "date": "2026-10-08 Asia/Shanghai",
+    "input_hashes_unchanged": true,
+    "view_image_calls": 0,
+    "new_files": [],
+    "evidence": "N3.md",
+    "private_event_stream_sha256": "bc6e539c0abed27c23ced27cc7ca21b5f0efd24a126709ec0808141cf1ee3681"
+  }
+]
