@@ -1,7 +1,7 @@
 # Automated program checks
 
 The **Package tests** GitHub Actions workflow runs on `push` and `pull_request`
-with Ubuntu and Python 3.11. It builds the documented plugin ZIP from the checked-out
+with Ubuntu 24.04 and Python 3.11. It builds the documented plugin ZIP from the checked-out
 commit, extracts it into a temporary directory, checks the package layout and runs
 all ten existing `test_*.py` entrypoints from that extraction. Any failed command
 fails the job. Bundled-colour tests read the shipped TCX reference files, verify
