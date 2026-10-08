@@ -24,6 +24,10 @@ Local image/repeat tools also need [Python setup](#local-runtime); the two-page 
 
 [View the sample](#sample-output) · [Workflow](#workflow-at-a-glance) · [Try it](#try-it) · [Download v1.3.0](https://github.com/jinglong921284-code/aesthetic-print-designer/releases/tag/v1.3.0) · [Commercial licensing](COMMERCIAL-LICENSING.md)
 
+[Plugin submission guide](docs/SUBMISSION.md) · [Submission tests](docs/SUBMISSION_TESTS.md) · [Privacy](PRIVACY.md) · [Support](SUPPORT.md)
+
+The root `plugin.json` prepares a skills-only plugin package separately from the standalone v1.3.0 skill ZIP. It does not establish submission, approval or directory publication.
+
 ## Sample output
 
 **Garden Reverie — Herons by the Stream · GDN-LY-01**
